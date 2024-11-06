@@ -16,13 +16,14 @@ function Counter() {
       <WelcomeMessage />
       <Header />
       <MainContent />
-      <Footer />
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-    
+
       <p>Current Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       <button onClick={() => setCount(count - 1)}>Decrement</button>
       <button onClick={() => setCount(0)}>Reset</button>
+      
+      <Footer />
     </div>
     </>
   );
