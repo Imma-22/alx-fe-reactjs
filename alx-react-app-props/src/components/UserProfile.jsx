@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
+import UserContext from '../components/UserContext';
+
 const UserProfile = ({ name, age, bio }) => {
     return (
 
@@ -5,6 +9,7 @@ const UserProfile = ({ name, age, bio }) => {
    <h2 style={{ color: 'blue' }}>{name}</h2>
    <p>Age: 26 <span style={{ fontWeight: 'bold' }}>{age}</span></p>
    <p>Bio: Loves travel and photography {bio}</p>
+   <UserContext/>
  </div>
 
 );
