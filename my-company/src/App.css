@@ -1,0 +1,23 @@
+ #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5em;
+  text-align: center;
+  height: 100%;
+
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+footer {
+  padding: 10px;
+  background: #ddd;
+  text-align: center;
+}
