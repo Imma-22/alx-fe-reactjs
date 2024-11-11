@@ -26,6 +26,7 @@ const AddRecipeForm = () => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="Description"
+        style={{ display: 'block', margin: '10px 0', padding: '5px' }}
       />
       <button type="submit">Add Recipe</button>
     </form>
