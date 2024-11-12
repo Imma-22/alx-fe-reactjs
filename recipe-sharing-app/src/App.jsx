@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
@@ -8,7 +8,7 @@ import RecommendationsList from './components/RecommendationsList';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
       <h1>Recipe Sharing App</h1>
       <SearchBar />
@@ -29,7 +29,7 @@ function App() {
       <Route path="/recipe/:recipeId" element={<RecipeDetails />}/>
       </Routes> 
     </div>
-</Router>
+</BrowserRouter>
   );
 }
 
