@@ -43,7 +43,7 @@ const RegistrationForm = () => {
         <input style = {{marginLeft: '40px'}}
           type="text"
           name="username"
-          value={formData.username}
+          value={formData.username} // Explicitly using value={username}
           onChange={handleChange}
         />
         {errors.username && <p style={{ color: 'red' }}>{errors.username}</p>}
@@ -53,7 +53,7 @@ const RegistrationForm = () => {
         <input style = {{marginLeft: '80px'}}
           type="email"
           name="email"
-          value={formData.email}
+          value={formData.email}  // Explicitly using value={email}
           onChange={handleChange}
         />
         {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
@@ -63,7 +63,7 @@ const RegistrationForm = () => {
         <input style = {{marginLeft: '50px'}}
           type="password"
           name="password"
-          value={formData.password}
+          value={formData.password} // Explicitly using value={password}
           onChange={handleChange}
         />
         {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
