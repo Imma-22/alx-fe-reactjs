@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { useQuery } from 'react-query';
+import { isError, useQuery } from 'react-query';
 
 const fetchPosts = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -14,7 +14,7 @@ const PostsComponent = () => {
   const { data, error, isLoading, refetch } = useQuery('posts', fetchPosts);
 
   if (isLoading) return <p>Loading posts...</p>;
-  if (error) return <p>Error loading posts: {error.message}</p>;
+  if (isError) return <p>Error loading posts: {error.message}</p>;
 
   return (
     <div>
