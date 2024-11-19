@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import RegistrationForm from './components/RegistrationForm';
-import FormikForm from '../formikForm';
+import FormikForm from './components/formikForm';
 import './App.css'
+
 
 
 function App() {
