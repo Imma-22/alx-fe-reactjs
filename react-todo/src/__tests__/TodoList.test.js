@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import TodoList from '../components/TodoList';
 
 describe('TodoList Component', () => {
-  test('renders initial todos', () => {
+  test('renders initial a few demo todos', () => {
     render(<TodoList />);
     expect(screen.getByText('Learn React')).toBeInTheDocument();
     expect(screen.getByText('Build a Todo App')).toBeInTheDocument();
