@@ -7,6 +7,7 @@ import NotFound from './components/NotFound';
 import UserProfile from './components/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 
+
 function App() {
 
   const isAuthenticated = false; // Simulate authentication
