@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import TodoList from "../components/TodoList";
 import "@testing-library/jest-dom";
 
+describe("TodoList Component", () => {
 test("renders initial todos", () => {
   render(<TodoList />);
   expect(screen.getByText("Learn React")).toBeInTheDocument();
@@ -26,6 +27,10 @@ test("toggles a todo's completion", () => {
   fireEvent.click(todo);
 
   expect(todo).toHaveStyle("text-decoration: line-through");
+
+  fireEvent.click(todo);
+
+    expect(todo).toHaveStyle("text-decoration: none");
 });
 
 test("deletes a todo", () => {
@@ -36,4 +41,6 @@ test("deletes a todo", () => {
   fireEvent.click(deleteButton);
 
   expect(todo).not.toBeInTheDocument();
+});
+
 });
