@@ -3,12 +3,13 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import TodoList from "../components/TodoList";
 import "@testing-library/jest-dom";
 
-describe("TodoList Component", () => {
-test("renders initial todos", () => {
+describe("TodoList Component - Initial Render", () => {
+test("renders a few demo todos correctly", () => {
   render(<TodoList />);
   expect(screen.getByText("Learn React")).toBeInTheDocument();
   expect(screen.getByText("Build a Todo App")).toBeInTheDocument();
 });
+
 
 test("adds a new todo", () => {
   render(<TodoList />);
