@@ -1,5 +1,3 @@
-const jestConfig = {
+module.exports = {
     testEnvironment: "jsdom",
   };
-  
-  export default jestConfig;
