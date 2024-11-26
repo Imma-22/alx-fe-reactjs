@@ -1,13 +1,15 @@
+import React from "react";
+import UserProfile from "./components/UserProfile";
 import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind CSS is working!
-      </h1>
+    <div>
+      <UserProfile />
     </div>
+
   );
+
 }
 
 export default App;
