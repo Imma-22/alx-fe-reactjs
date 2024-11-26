@@ -2,7 +2,7 @@ import React from "react";
 
 function UserProfile() {
   return (
-    <div className="bg-gray-100 p-8 md:p-8 max-w-sm md:max-w-sm mx-auto my-20 rounded-lg shadow-lg user-profile">
+    <div className="bg-gray-100 md:p-8 sm:p-4 sm:max-w-xs md:max-w-sm mx-auto my-20 rounded-lg shadow-lg user-profile">
       <img
         src="https://via.placeholder.com/150"
         alt="User"
