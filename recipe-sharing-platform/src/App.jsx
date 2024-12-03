@@ -1,10 +1,11 @@
 import React from "react";
+import HomePage from "./components/HomePage";
 import './App.css'
 
 function App() {
   return (
-    <div>
-      <h1>Recipe Sharing Platform</h1>
+    <div className="text-center mt-20">
+      <HomePage />
     </div>
 
   );
