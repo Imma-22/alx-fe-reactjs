@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom"; 
+import { useNavigate } from 'react-router-dom';  // To navigate after form submission 
 
 const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [ingredients, setIngredients] = useState('');
-  const [instructions, setInstructions] = useState('');
+  const [steps, setSteps] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+
+  const navigate = useNavigate();  // Used for navigation after submission
 
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Simple validation
-    if (!title || !ingredients || !instructions) {
+    if (!title || !ingredients || !steps) {
       setError('All fields are required.');
       return;
     }
@@ -26,8 +28,8 @@ const AddRecipeForm = () => {
 
     const newRecipe = {
       title,
-      ingredients: ingredientsList,
-      instructions: instructions.split('\n').map((step) => step.trim()).filter(Boolean),
+      ingredients: ingredients.split('\n'), // Split ingredients into an array
+      steps: steps.split('\n').map((step) => step.trim()).filter(Boolean),
     };
 
     // Mock submission logic
@@ -79,16 +81,16 @@ const AddRecipeForm = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 font-medium" htmlFor="instructions">
+          <label className="block text-gray-700 font-medium" htmlFor="steps">
             Instructions (one per line)
           </label>
           <textarea
-            id="instructions"
-            value={instructions}
-            onChange={(e) => setInstructions(e.target.value)}
+            id="step"
+            value={steps}
+            onChange={(e) => setSteps(e.target.value)}
             className="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             rows="6"
-            placeholder="Enter instructions, one per line"
+            placeholder="Enter preparation steps, one per line"
           />
         </div>
 
