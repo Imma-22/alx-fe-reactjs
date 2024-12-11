@@ -5,6 +5,7 @@ function Search({ setUserData, setLoading, setError }) {
   const [username, setUsername] = useState("");
   const [location, setLocation] = useState("");
   const [minRepos, setMinRepos] = useState(0);
+  const [userList, setUserList] = useState([]); // Added state for userList
 
 
   const handleSubmit = async (e) => {
@@ -33,6 +34,7 @@ function Search({ setUserData, setLoading, setError }) {
     setUsername(""); // Reset the input field after the search
     setLocation(""); // Reset the location field
     setMinRepos(0); // Reset min repos field
+    setUserList([]);
   };
 
   return (
@@ -96,6 +98,7 @@ function Search({ setUserData, setLoading, setError }) {
           ))}
         </div>
       )}
+      
     </div>
   );
 }
