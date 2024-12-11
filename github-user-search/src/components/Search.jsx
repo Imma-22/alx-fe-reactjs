@@ -93,8 +93,8 @@ function Search({ setUserData, setLoading, setError }) {
                 className="text-blue-500 hover:underline mt-2 block"
               >
                 View Profile
-              </a>
-            </div>
+              </a>   
+            </div>         
           ))}
         </div>
       )}
