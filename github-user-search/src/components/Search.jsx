@@ -23,7 +23,7 @@ function Search({ setUserData, setLoading, setError }) {
         login: data.login,
       });
     } else {
-      setError("Looks like we can't find the user");
+      setError("Looks like we cant find the user");
     }
 
     setLoading(false);
