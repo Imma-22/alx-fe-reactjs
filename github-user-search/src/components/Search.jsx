@@ -71,21 +71,34 @@ function Search({ setUserData, setLoading, setError }) {
       {setLoading && <p className="text-gray-500">Loading...</p>}
       {setError && <p className="text-red-500">{setError}</p>}
 
-      {setUserData && !setLoading && !setError && (
+      {/* Iterate over the userList array using map */}
+      {userList && !setLoading && !setError && (
         <div className="user-info mt-4">
-          {/* Display the user's avatar, login and additional info  */}
-          <img
-            src={setUserData.avatar_url}
-            alt={setUserData.login}
-            className="w-24 h-24 rounded-full border-2 border-gray-300 mx-auto"
-          />
-          <p className="text-xl font-semibold mt-2">{setUserData.login}</p>
-          <p className="text-gray-500">Location: {setUserData.location}</p>
-          <p className="text-gray-500">Repositories: {setUserData.public_repos}</p>
+          {userList.map((user) => (
+            <div key={user.id} className="user-card bg-white shadow-lg rounded-lg p-4 mb-4">
+              <img
+                src={user.avatar_url}
+                alt={user.login}
+                className="w-24 h-24 rounded-full border-2 border-gray-300 mx-auto"
+              />
+              <p className="text-xl font-semibold mt-2">{user.login}</p>
+              <p className="text-gray-500">Location: {user.location || "N/A"}</p>
+              <p className="text-gray-500">Repositories: {user.public_repos}</p>
+              <a
+                href={user.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline mt-2 block"
+              >
+                View Profile
+              </a>
+            </div>
+          ))}
         </div>
       )}
     </div>
   );
 }
+
 
 export default Search;
